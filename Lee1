@@ -1,0 +1,31 @@
+package com.leetcode1;
+import java.util.Arrays
+public class Leetcode1 {
+
+    int[] nums={2,7,11,15};
+
+
+    public int[] twoSums(int [] nums,int target){
+        int i;
+        int j;
+        int[] s=new int[2];
+
+
+        for(i=0;i<nums.length;i++){
+            for(j=i+1;j<nums.length;j++){
+                int sum=nums[i]+nums[j];
+                if(sum==target){
+                    return s= new int[]{i, j};
+                }
+            }
+        }
+        throw new IllegalArgumentException("No two sum");
+    }
+
+    public static void main(String[] args){
+        Leetcode1 d1=new Leetcode1();
+        System.out.println(Arrays.toString(d1.twoSums(d1.nums,9)));
+
+}
+
+}
